@@ -39,6 +39,17 @@ public_users.get('/',function (req, res) {
     });
 });
 
+// public_users.get('/', async function (req, res) {
+//   try {
+//     const booksList = await new Promise((resolve, reject) => {
+//       resolve(books);
+//     });
+//     res.status(200).json(booksList);
+//   } catch (error) {
+//     res.status(500).json({ message: "Error fetching the book list", error });
+//   }
+// });
+
 // Get book details based on ISBN
 public_users.get('/isbn/:isbn',function (req, res) {
   const isbn = req.params.isbn;
